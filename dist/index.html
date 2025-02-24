@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>攝氏轉華氏溫度換算</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        #converter {
+            display: inline-block;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        input {
+            width: 80%;
+            height: 30px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        button {
+            width: 85%;
+            height: 40px;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>攝氏轉華氏溫度換算</h1>
+    <div id="converter">
+        <label for="celsius">輸入攝氏溫度：</label>
+        <input type="number" id="celsius" placeholder="輸入溫度">
+        <br>
+        <button onclick="convertTemperature()">轉換</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function convertTemperature() {
+            let celsius = document.getElementById('celsius').value;
+            if (celsius === '') {
+                alert('請輸入攝氏溫度');
+                return;
+            }
+            let fahrenheit = (celsius * 9/5) + 32;
+            document.getElementById('result').innerText = `華氏溫度：${fahrenheit.toFixed(2)}°F`;
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
